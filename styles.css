@@ -17,8 +17,8 @@ body {
     border-radius: 20px;
     padding: 20px;
     width: 100%;
-    max-width: 300px;
-    margin: 30px 30px;
+    max-width: 350px;
+    margin: 30px;
 }
 
 /* Search bar */
@@ -35,6 +35,7 @@ body {
     padding: 10px;
     width: 75%;
     outline: none;
+    margin: 10px;
 }
 
 .searchbar:active {
@@ -58,23 +59,28 @@ button:hover {
 }
 
 /* Temperature */ 
-h1{
+h1, h2{
     margin: 0;
 }
 
+/* Location information */
+/* Description of the weather */
 .description {
     text-transform: capitalize;
 }
 
+/* Minimum and maximum temps of the day */
 .min-temp, .max-temp {
     display: inline;
 }
 
+/* Weather info and icon */
 .temp-info {
     display: flex;
     align-items: center;
 }
 
+/* Whilst API is fetching data */
 .weather .loading {
     visibility: hidden;
     max-height: 20px;
