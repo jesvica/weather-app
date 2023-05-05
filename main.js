@@ -19,8 +19,8 @@ let weather = {
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temperature").innerText = temp + "°C";
-        document.querySelector(".min-temp").innerText = "L: " + temp_min;
-        document.querySelector(".max-temp").innerText = "H: " + temp_max;
+        document.querySelector(".min-temp").innerText = "L: " + temp_min + "°C";
+        document.querySelector(".max-temp").innerText = "H: " + temp_max + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity +"%";
         document.querySelector(".wind").innerText = "Wind: " + speed + "mph";
         document.querySelector(".weather").classList.remove("loading");
@@ -40,4 +40,3 @@ document.querySelector('.searchbar').addEventListener("keyup", function (event) 
     }
 });
 
-weather.fetchWeather("London");
