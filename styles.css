@@ -74,3 +74,16 @@ h1{
     display: flex;
     align-items: center;
 }
+
+.weather .loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather .loading:after {
+    visibility: visible;
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+}
