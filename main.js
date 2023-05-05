@@ -23,5 +23,18 @@ let weather = {
         document.querySelector(".max-temp").innerText = "H: " + temp_max;
         document.querySelector(".humidity").innerText = "Humidity: " + humidity +"%";
         document.querySelector(".wind").innerText = "Wind: " + speed + "mph";
+    },
+    search: function() {
+        this.fetchWeather(document.querySelector('.searchbar').value);
     }
 };
+
+document.querySelector(".search button").addEventListener('click', function() {
+    weather.search();
+});
+
+document.querySelector('searchbar').addEventListener('keyup', function(event) {
+    if (event.key == 'enter') {
+        weather.search();
+    }
+})
