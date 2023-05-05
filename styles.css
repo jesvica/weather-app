@@ -62,4 +62,15 @@ h1{
     margin: 0;
 }
 
+.description {
+    text-transform: capitalize;
+}
 
+.min-temp, .max-temp {
+    display: inline;
+}
+
+.temp-info {
+    display: flex;
+    align-items: center;
+}
