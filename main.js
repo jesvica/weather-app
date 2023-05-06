@@ -20,7 +20,7 @@ let weather = {
 
         // Displaying weather data
         document.querySelector(".city").innerText = name;
-        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        
         document.querySelector(".description").innerText = description;
         document.querySelector(".temperature").innerText = Math.round(temp) + "°C";
         document.querySelector(".min-temp").innerText = "L: " + Math.round(temp_min) + "°C";

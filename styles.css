@@ -35,7 +35,8 @@ body {
     padding: 10px;
     width: 75%;
     outline: none;
-    margin: 10px;
+    margin: 10px 0 10px 10px;
+    text-align: center;
 }
 
 .searchbar:active {
@@ -59,11 +60,25 @@ button:hover {
 }
 
 /* Temperature */ 
-h1, h2{
+h1, h2, .description{
     margin: 0;
+    text-align: center;
 }
 
 /* Location information */
+/* Weather icon */
+.weather-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon {
+    height: 110px;
+    width: auto;
+    padding: 10px 0;
+}
+
 /* Description of the weather */
 .description {
     text-transform: capitalize;
@@ -74,22 +89,12 @@ h1, h2{
     display: inline;
 }
 
-/* Weather info and icon */
-.temp-info {
-    display: flex;
-    align-items: center;
+.weather-info {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Whilst API is fetching data */
-.weather .loading {
-    visibility: hidden;
-    max-height: 20px;
-    position: relative;
-}
-
-.weather .loading:after {
-    visibility: visible;
-    content: "Loading...";
-    position: absolute;
-    top: 0;
+/* Display before any location is searched */
+.weather {
+    display: none;
 }
