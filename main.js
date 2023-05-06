@@ -15,12 +15,12 @@ let weather = {
         const { temp, temp_min, temp_max, humidity } = data.main;
         const { speed } = data.wind;
 
-        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".city").innerText = name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText = description;
-        document.querySelector(".temperature").innerText = temp + "°C";
-        document.querySelector(".min-temp").innerText = "L: " + temp_min + "°C";
-        document.querySelector(".max-temp").innerText = "H: " + temp_max + "°C";
+        document.querySelector(".temperature").innerText = Math.round(temp) + "°C";
+        document.querySelector(".min-temp").innerText = "L: " + Math.round(temp_min) + "°C";
+        document.querySelector(".max-temp").innerText = "H: " + Math.round(temp_max) + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity +"%";
         document.querySelector(".wind").innerText = "Wind: " + speed + "mph";
         document.querySelector(".weather").classList.remove("loading");
@@ -28,6 +28,7 @@ let weather = {
     search: function() {
         this.fetchWeather(document.querySelector('.searchbar').value);
     }
+    
 };
 
 document.querySelector(".search button").addEventListener("click", function() {
