@@ -9,6 +9,8 @@ let weather = {
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
     },
+
+    // Gathering weather data
     displayWeather: function(data) {
         const { name } = data;
         const { icon, description } = data.weather[0];
@@ -16,6 +18,7 @@ let weather = {
         const { speed } = data.wind;
         const weatherIcon = document.querySelector(".weather-icon");
 
+        // Displaying weather data
         document.querySelector(".city").innerText = name;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText = description;
@@ -26,6 +29,7 @@ let weather = {
         document.querySelector(".wind").innerText = "Wind: " + speed + "mph";
         document.querySelector(".weather").classList.remove("loading");
 
+        // Changing weather icon image depending on weather state
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "weather-images/cloud.svg";
         } else if(data.weather[0].main == "Clear"){
@@ -40,6 +44,9 @@ let weather = {
             weatherIcon.src = "weather-images/storm.svg";
         }
 
+        // Displaying weather data when location is entered
+        document.querySelector('.weather').style.display = "block";
+
     },
     search: function() {
         this.fetchWeather(document.querySelector('.searchbar').value);
@@ -47,10 +54,12 @@ let weather = {
     
 };
 
+// Searching for location weather when search button is pressed
 document.querySelector(".search button").addEventListener("click", function() {
     weather.search();
 });
 
+// Searching for location weather when enter keyboard button is pressed
 document.querySelector('.searchbar').addEventListener("keyup", function (event) {
     if (event.key == 'Enter') {
         weather.search();
