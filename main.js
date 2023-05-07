@@ -23,8 +23,8 @@ let weather = {
         
         document.querySelector(".description").innerText = description;
         document.querySelector(".temperature").innerText = Math.round(temp) + "°C";
-        document.querySelector(".min-temp").innerText = "L: " + Math.round(temp_min) + "°C";
-        document.querySelector(".max-temp").innerText = "H: " + Math.round(temp_max) + "°C";
+        document.querySelector(".min-temp").innerText = "Low: " + Math.round(temp_min) + "°C";
+        document.querySelector(".max-temp").innerText = "High: " + Math.round(temp_max) + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity +"%";
         document.querySelector(".wind").innerText = "Wind: " + speed + "mph";
         document.querySelector(".weather").classList.remove("loading");

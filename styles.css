@@ -17,7 +17,7 @@ body {
     border-radius: 20px;
     padding: 20px;
     width: 100%;
-    max-width: 350px;
+    max-width: 370px;
     margin: 30px;
 }
 
@@ -65,9 +65,13 @@ h1, h2, .description{
     text-align: center;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 /* Location information */
 /* Weather icon */
-.weather-image{
+.weather-icon-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +80,7 @@ h1, h2, .description{
 .weather-icon {
     height: 110px;
     width: auto;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 /* Description of the weather */
